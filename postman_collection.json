@@ -1,0 +1,167 @@
+{
+  "info": {
+    "name": "Event Planner API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Event Management",
+      "item": [
+        {
+          "name": "Create Cricket Tournament",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/events",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["events"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Cricket Tournament\",\n  \"location\": \"Mumbai\",\n  \"eventDate\": \"2024-03-16T10:00:00\",\n  \"eventType\": \"cricket\",\n  \"description\": \"Annual cricket tournament\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Create Wedding",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/events",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["events"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Beach Wedding\",\n  \"location\": \"Goa\",\n  \"eventDate\": \"2024-12-10T15:00:00\",\n  \"eventType\": \"wedding\",\n  \"description\": \"Beach wedding ceremony\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Create Hiking Trip",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/events",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["events"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Weekend Hiking\",\n  \"location\": \"Lonavala\",\n  \"eventDate\": \"2024-10-20T08:00:00\",\n  \"eventType\": \"hiking\",\n  \"description\": \"Weekend hiking trip\"\n}"
+            }
+          }
+        },
+        {
+          "name": "List All Events",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/events",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["events"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Weather Integration",
+      "item": [
+        {
+          "name": "Get Weather for Mumbai",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/weather/Mumbai/2024-03-16T10:00:00",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["weather", "Mumbai", "2024-03-16T10:00:00"]
+            }
+          }
+        },
+        {
+          "name": "Get Weather Forecast",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/weather/forecast/Mumbai?startDate=2024-03-16T00:00:00&endDate=2024-03-20T00:00:00",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["weather", "forecast", "Mumbai"],
+              "query": [
+                {
+                  "key": "startDate",
+                  "value": "2024-03-16T00:00:00"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2024-03-20T00:00:00"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Event Weather Analysis",
+      "item": [
+        {
+          "name": "Check Weather Suitability",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/events/1/weather-check",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["events", "1", "weather-check"]
+            }
+          }
+        },
+        {
+          "name": "Get Alternative Dates",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "http://localhost:8080/events/1/alternatives",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["events", "1", "alternatives"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+} 

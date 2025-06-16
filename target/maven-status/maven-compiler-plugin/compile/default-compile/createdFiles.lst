@@ -1,0 +1,13 @@
+Event\Planner\Event\Planner\EventPlannerApplication.class
+Event\Planner\Event\Planner\service\impl\WeatherServiceImpl.class
+Event\Planner\Event\Planner\config\SecurityConfig.class
+Event\Planner\Event\Planner\repository\EventRepository.class
+Event\Planner\Event\Planner\repository\WeatherDataRepository.class
+Event\Planner\Event\Planner\service\impl\EventServiceImpl.class
+Event\Planner\Event\Planner\model\Event.class
+Event\Planner\Event\Planner\service\WeatherService.class
+Event\Planner\Event\Planner\controller\EventController.class
+Event\Planner\Event\Planner\controller\WeatherController.class
+Event\Planner\Event\Planner\service\EventService.class
+Event\Planner\Event\Planner\model\WeatherData.class
+Event\Planner\Event\Planner\client\OpenWeatherMapClient.class
